@@ -9,18 +9,14 @@ function validarResultados(n1, n2, tipoDeCalculo) {
     let operacao = String(tipoDeCalculo)
 
     if (
-        numero1 == "" || isNaN(numero1) ||
-        numero2 == "" || isNaN(numero2) ||
-        operacao == ""
+        numero1 === "" || isNaN(numero1) ||
+        numero2 === "" || isNaN(numero2) ||
+        operacao === ""
     ) {
         return false
-    } else if (sub.includes(operacao)) {
-        return true
-    } else if (soma.includes(operacao)) {
-        return true
-    } else if (mult.includes(operacao)) {
-        return true
-    } else if (div.includes(operacao)) {
+    } else if (
+        sub.includes(operacao) || soma.includes(operacao) ||
+        mult.includes(operacao) || div.includes(operacao)) {
         return true
     } else {
         return false
